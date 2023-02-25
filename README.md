@@ -50,4 +50,37 @@
     Формат ответа (в случае ошибки):
     {"message": "get_secret_question_fail",
      "information": <Exception>}
+     
+ Смена пароля
  
+    Формат запроса:
+    {"message": "change_password",
+     "information": {"username": <username>,
+                     "password": <password>,
+                     "answer": <answer>}
+
+    Формат ответа (в случае успеха):
+    {"message": "change_password_success",
+     "information": {"new_password": <password>}}
+
+    Формат ответа (в случае ошибки):
+    {"message": "change_password_fail",
+     "information": <Exception>}
+ 
+ Поиск игры
+ 
+    Формат запроса:
+    {"message": "find_game",
+     "information": ""}
+
+    Формат ответа (в случае успеха):
+    {"message": "wait",
+     "information": ""}
+    
+    Или если игра началась:
+    {"message": "start",
+     "information": ""}
+    
+    Формат ответа (если не пользователь не авторизован):
+    {"message": "not_authorized",
+     "information": <Exception>}
